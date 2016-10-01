@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 /**
  * Outputs the OPML XML format for getting the links defined in the link
  * administration. This can be used to export links from one blog over to
@@ -22,7 +26,7 @@ if ( !empty($_GET['link_cat']) ) {
 		$link_cat = absint( (string)urldecode($link_cat) );
 }
 
-echo '<?xml version="1.0"?'.">\n";
+echo '<?phpxml version="1.0"?'.">\n";
 ?>
 <opml version="1.0">
 	<head>
@@ -46,7 +50,7 @@ else
 
 foreach ( (array)$cats as $cat ) :
 	/**
-	 * Filter the OPML outline link category name.
+	 * Filters the OPML outline link category name.
 	 *
 	 * @since 2.2.0
 	 *
@@ -60,7 +64,7 @@ foreach ( (array)$cats as $cat ) :
 	$bookmarks = get_bookmarks(array("category" => $cat->term_id));
 	foreach ( (array)$bookmarks as $bookmark ) :
 		/**
-		 * Filter the OPML outline link title text.
+		 * Filters the OPML outline link title text.
 		 *
 		 * @since 2.2.0
 		 *
