@@ -1,7 +1,7 @@
 <?php
 /**
  * Permalink Settings Administration Screen.
- *
+ * Amazing
  * @package WordPress
  * @subpackage Administration
  */
